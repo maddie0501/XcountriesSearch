@@ -111,7 +111,7 @@ function Countrycard({ common, png }) {
         alt={`Flag of ${common}`}
         style={{ height: "100px", width: "100px" }}
       />
-      <h3>{common} flag</h3>
+      <h2>{common}</h2>
     </div>
   );
 }
