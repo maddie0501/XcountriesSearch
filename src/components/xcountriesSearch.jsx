@@ -24,7 +24,7 @@ const Countrylist = () => {
     fetchcountry();
   }, []);
 
-  const debounceSearch = (event, debounceTimeout, fetchcountry) => {
+  const debounceSearch = (event, debounceTimeout) => {
     const val = event.target.value;
     setsearch(val);
 
@@ -33,7 +33,7 @@ const Countrylist = () => {
     }
 
     const Timeout = setTimeout(async () => {
-      await fetchcountry(val);
+      
     }, 500);
 
     setdebounceTimeout(Timeout);
@@ -53,7 +53,7 @@ const Countrylist = () => {
           alignItems: "center",
           textAlign: "center",
           paddingBottom: "20px",
-          backgroundColor: "#ccc000080",
+          backgroundColor: "#cccccc80",
         }}
       >
         <form>
@@ -93,7 +93,7 @@ const Countrylist = () => {
 
 function Countrycard({ common, png }) {
   return (
-    <div
+    <div className="countryCard"
       style={{
         display: "flex",
         flexDirection: "column",
